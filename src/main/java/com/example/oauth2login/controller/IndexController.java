@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FeedController {
 
-    @GetMapping("/feed")
+    @GetMapping("")
     public String feed() {
-        return "Feed";
+        return "index.mustache";
     }
 
 }
