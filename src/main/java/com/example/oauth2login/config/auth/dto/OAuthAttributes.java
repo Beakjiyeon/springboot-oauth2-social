@@ -1,4 +1,4 @@
-package com.example.oauth2login.config.auth;
+package com.example.oauth2login.config.auth.dto;
 
 import com.example.oauth2login.domain.Role;
 import com.example.oauth2login.domain.User;
@@ -28,6 +28,13 @@ public class OAuthAttributes {
         this.picture = picture;
     }
 
+    /**
+     * OAuth2User 에서 사용자 정보를 맵 형태로 반환하기 떄문에 dto 형태로 둔다.
+     * @param registrationId
+     * @param userNameAttributeName
+     * @param attributes
+     * @return
+     */
     public static OAuthAttributes of(String registrationId,
                                      String userNameAttributeName,
                                      Map<String, Object> attributes) {

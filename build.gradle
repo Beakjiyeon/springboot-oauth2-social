@@ -20,10 +20,24 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.5.2'
+    // implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.5.2'
     ///implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Security
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    // TEST
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // DB
+    implementation 'mysql:mysql-connector-java' // MySql
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+
+    // front
+    implementation 'org.springframework.boot:spring-boot-starter-mustache'
+    testImplementation 'org.springframework.boot:spring-boot-starter-mustache'
 }
 
 tasks.named('test') {
